@@ -1,0 +1,24 @@
+experiment:
+  name: 'gtmp_mbm_straight'
+  seed: 1111
+
+
+robot: 'panda'
+problem: 'box'  # 'bookshelf_small', 'bookshelf_tall', 'bookshelf_thin', 'box', 'cage', 'table_pick', 'table_under_pick'
+index: 90  # 0 - 99
+num_plans: 100
+num_goals: 1
+n_jobs: -2  # CPU parallelism for VAMP validation: -1=all CPUs, -2=all but one, 1=serial
+
+planner:
+  name: 'straight'
+  params:
+    num_dreams: 50
+    num_layers: 5
+    num_probes: 20
+    visualize_value: False
+
+
+hydra:
+  run:
+    dir: ../data/outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}

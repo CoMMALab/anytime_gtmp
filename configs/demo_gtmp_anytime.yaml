@@ -1,0 +1,22 @@
+experiment:
+  name: 'gtmp_anytime'
+  seed: 1111
+
+
+robot: 'panda'
+problem: 'box'  # 'bookshelf_small', 'bookshelf_tall', 'bookshelf_thin', 'box', 'cage', 'table_pick', 'table_under_pick'
+index: 90  # 0 - 99
+batch_size: 10  # Number of parallel planning attempts per iteration
+n_jobs: -2  # CPU parallelism for VAMP validation: -1=all CPUs, -2=all but one, 1=serial
+
+anytime:
+  min_layers: 1
+  max_layers: 30
+  min_dreams: 20
+  max_dreams: 200
+  dreams_step: 10
+
+
+hydra:
+  run:
+    dir: ../data/outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
