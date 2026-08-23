@@ -5,6 +5,10 @@
 ```
 git clone https://github.com/commalab/anytime_gtmp
 cd anytime_gtmp
+git submodule update --init --recursive
+cd vamp
+git checkout benchmark_aorrtc_backend
+cd ..
 ```
 
 

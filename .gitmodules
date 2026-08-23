@@ -1,0 +1,6 @@
+[submodule "pyroffi"]
+	url = https://github.com/commalab/pyroffi.git
+	path = pyroffi
+[submodule "vamp"]
+	path = vamp
+	url = https://github.com/CoMMALab/vamp.git
